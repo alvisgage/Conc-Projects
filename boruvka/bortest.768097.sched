@@ -1,0 +1,57 @@
+workdir is: /scratch/rga001/boruvka
+/scratch/rga001/boruvka
+INVALID PATH IN TREE
+printing tree...
+from	1	to	2	weight	1
+from	2	to	3	weight	4
+from	4	to	5	weight	10
+from	5	to	6	weight	13
+from	6	to	7	weight	16
+from	7	to	8	weight	19
+from	8	to	4	weight	22
+n:	8	p:	1	time:	17100976
+
+tree path valid
+printing tree...
+from	1	to	2	weight	1
+from	2	to	3	weight	4
+from	3	to	4	weight	7
+from	4	to	5	weight	10
+from	5	to	6	weight	13
+from	6	to	7	weight	16
+from	7	to	8	weight	19
+n:	8	p:	2	time:	32245440
+
+
+
+
+tree path valid
+printing tree...
+from	1	to	2	weight	1
+from	2	to	3	weight	4
+from	3	to	4	weight	7
+from	4	to	5	weight	10
+from	5	to	6	weight	13
+from	6	to	7	weight	16
+from	7	to	8	weight	19
+n:	8	p:	4	time:	-151448712
+
+
+tree path valid
+printing tree...
+from	1	to	2	weight	1
+from	2	to	3	weight	4
+from	3	to	4	weight	7
+from	4	to	5	weight	10
+from	5	to	6	weight	13
+from	6	to	7	weight	16
+from	7	to	8	weight	19
+n:	8	p:	8	time:	52933496
+
+
+
+
+
+
+
+

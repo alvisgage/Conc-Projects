@@ -1,0 +1,43 @@
+workdir is: /scratch/rga001/greeting
+/scratch/rga001/greeting
+Greetings from process 1!
+Greetings from process 2!
+Greetings from process 3!
+Greetings from process 4!
+Greetings from process 5!
+Greetings from process 6!
+Greetings from process 7!
+Greetings from process 8!
+Greetings from process 9!
+Greetings from process 10!
+Greetings from process 11!
+PBS Job Statistics:
+
+PBS Input:
+#PBS -N greeting
+#PBS -q tiny12core
+#PBS -j oe
+#PBS -m abe
+#PBS -M rga001@uark.edu
+#PBS -o GREETING.$PBS_JOBID
+#PBS -l nodes=2:ppn=6
+#PBS -l walltime=00:00:30
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+mpirun -np 12 -machinefile $PBS_NODEFILE /scratch/rga001/greeting/greeting
+
+
+PBS Job ID: 661996.sched
+Resource List: neednodes=2:ppn=6,nodes=2:ppn=6,walltime=00:00:30
+Resources Used: cput=00:00:13,mem=800kb,vmem=11544kb,walltime=00:00:02
+Queue Name: tiny12core
+Program Return Code: 0
+Head Node:
+compute1141
+Slave Nodes:
+compute1142
+nnodes= 2 ncores= 12 njobs=1
+Warning: Permanently added 'compute1142,192.168.101.42' (RSA) to the list of known hosts.

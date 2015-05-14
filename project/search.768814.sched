@@ -1,0 +1,10 @@
+workdir is: /scratch/rga001/project
+/scratch/rga001/project
+0	initialized
+0	added edges
+0	calling dfs
+0 1 2 3 4 5 
+1	initialized
+1	added edges
+1	calling dfs
+6 7 8 9 10 11 

@@ -1,0 +1,16 @@
+#PBS -N bitonic
+#PBS -q tiny12core
+#PBS -j oe
+#PBS -m abe
+#PBS -M f
+#PBS -o BITONIC.$PBS_JOBID
+#PBS -l nodes=3:ppn=12
+#PBS -l walltime=00:05:00
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/bitonic/bitonic 16000000
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/bitonic/bitonic 128000000
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/bitonic/bitonic 256000000

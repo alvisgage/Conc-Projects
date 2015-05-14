@@ -1,0 +1,25 @@
+						0
+					1			2
+				3	4			5	6
+			7	8	9 10	11	12	13	14
+options:
+	keep it the same (from rank * n/p to rank+1 * n/p)
+		each proc saves mem (e/p)
+		inefficient
+	get all parents, assign parents to proc, assign edges by parent and dependency on parent
+		first few proc are inefficient
+	proc 0 starts at root, goes to p; others start at p + rank
+		proc 0 effiency changes
+		other proc effiency are equal
+		*** each proc has to have entire graph
+		
+option 3:
+int counter = 1;
+for (int i=0; i < n/2 -2; i++, counter++){
+	g.addEdge(i, i + counter);
+	g.addEdge(i, i + counter + 1);
+}
+if (rank==0)
+	g.DFS(0, p-2);
+else
+	g.DFS(rank + (p-2))

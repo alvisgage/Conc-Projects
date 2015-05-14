@@ -1,0 +1,17 @@
+#PBS -N bortest
+#PBS -q student8core
+#PBS -j oe
+#PBS -m e
+#PBS -o bortest.$PBS_JOBID
+#PBS -l nodes=2:ppn=8
+#PBS -l walltime=00:01:00
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/boruvka/bortest
+mpirun -np 2 -machinefile $PBS_NODEFILE /scratch/rga001/boruvka/bortest
+mpirun -np 4 -machinefile $PBS_NODEFILE /scratch/rga001/boruvka/bortest
+mpirun -np 8 -machinefile $PBS_NODEFILE /scratch/rga001/boruvka/bortest
+

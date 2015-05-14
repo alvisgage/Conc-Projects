@@ -1,0 +1,36 @@
+#PBS -N cannon
+#PBS -q tiny12core
+#PBS -j oe
+#PBS -m e
+#PBS -o cannon.$PBS_JOBID
+#PBS -l nodes=3:ppn=12
+#PBS -l walltime=01:00:00
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 900
+mpirun -np 4 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 900
+mpirun -np 9 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 900
+mpirun -np 25 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 900
+mpirun -np 36 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 900
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 1800
+mpirun -np 4 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 1800
+mpirun -np 9 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 1800
+mpirun -np 25 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 1800
+mpirun -np 36 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 1800
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 8100
+mpirun -np 4 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 8100
+mpirun -np 9 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 8100
+mpirun -np 25 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 8100
+mpirun -np 36 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 8100
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 48600
+mpirun -np 4 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 48600
+mpirun -np 9 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 48600
+mpirun -np 25 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 48600
+mpirun -np 36 -machinefile $PBS_NODEFILE /scratch/rga001/cannons/cannon 48600

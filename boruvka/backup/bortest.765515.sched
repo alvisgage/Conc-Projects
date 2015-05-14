@@ -1,0 +1,51 @@
+workdir is: /scratch/rga001/boruvka
+/scratch/rga001/boruvka
+2 4 to 5 weight: 10
+2 4 to 6 weight: 11
+2 4 to 7 weight: 12
+2 5 to 6 weight: 13
+2 5 to 7 weight: 14
+2 5 to 8 weight: 15
+
+3 6 to 7 weight: 16
+3 6 to 8 weight: 17
+3 6 to 1 weight: 18
+3 7 to 8 weight: 19
+3 7 to 2 weight: 20
+3 7 to 3 weight: 21
+
+0 1 to 2 weight: 1
+0 1 to 3 weight: 2
+0 1 to 4 weight: 3
+0 2 to 3 weight: 4
+0 2 to 4 weight: 5
+0 2 to 5 weight: 6
+0 3 to 4 weight: 7
+0 3 to 5 weight: 8
+0 3 to 6 weight: 9
+0 4 to 5 weight: 10
+0 4 to 6 weight: 11
+0 4 to 7 weight: 12
+0 5 to 6 weight: 13
+0 5 to 7 weight: 14
+0 5 to 8 weight: 15
+0 6 to 7 weight: 16
+0 6 to 8 weight: 17
+0 6 to 1 weight: 18
+0 7 to 8 weight: 19
+0 7 to 2 weight: 20
+0 7 to 3 weight: 21
+0 8 to 4 weight: 22
+0 8 to 5 weight: 23
+0 8 to 1 weight: 24
+0 1 to 2 weight: 1
+0 1 to 3 weight: 2
+0 1 to 4 weight: 3
+
+1 2 to 3 weight: 4
+1 2 to 4 weight: 5
+1 2 to 5 weight: 6
+1 3 to 4 weight: 7
+1 3 to 5 weight: 8
+1 3 to 6 weight: 9
+

@@ -1,0 +1,32 @@
+#PBS -N extended_bu
+#PBS -q tiny12core
+#PBS -j oe
+#PBS -m e
+#PBS -o extended_bu.$PBS_JOBID
+#PBS -l nodes=3:ppn=12
+#PBS -l walltime=00:01:00
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 216
+mpirun -np 3 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 216
+mpirun -np 6 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 216
+mpirun -np 12 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 216
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 1296
+mpirun -np 3 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 1296
+mpirun -np 6 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 1296
+mpirun -np 12 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 1296
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 7776
+mpirun -np 3 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 7776
+mpirun -np 6 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 7776
+mpirun -np 12 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 7776
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 46656
+mpirun -np 3 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 46656
+mpirun -np 6 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 46656
+mpirun -np 12 -machinefile $PBS_NODEFILE /scratch/rga001/gaus/extended_bu 46656

@@ -1,0 +1,15 @@
+#PBS -N factor
+#PBS -q tiny12core
+#PBS -j oe
+#PBS -m abe
+#PBS -M rga001@uark.edu
+#PBS -o FACTOR.$PBS_JOBID
+#PBS -l nodes=3:ppn=6
+#PBS -l walltime=00:00:30
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/pquicksort/numbers
+

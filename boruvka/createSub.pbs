@@ -1,0 +1,13 @@
+#PBS -N createGraph
+#PBS -q student8core
+#PBS -j oe
+#PBS -m e
+#PBS -o createGraph.$PBS_JOBID
+#PBS -l nodes=2:ppn=8
+#PBS -l walltime=00:00:30
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/rga001/boruvka/createGraph 8

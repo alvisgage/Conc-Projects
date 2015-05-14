@@ -1,0 +1,19 @@
+#PBS -N solutionsort
+#PBS -q tiny12core
+#PBS -j oe
+#PBS -m abe
+#PBS -M f
+#PBS -o SOLUTIONSORT.$PBS_JOBID
+#PBS -l nodes=3:ppn=12
+#PBS -l walltime=00:04:00
+
+cd $PBS_O_WORKDIR
+echo "workdir is: $PBS_O_WORKDIR"
+echo $PBS_O_WORKDIR
+
+mpirun -np 32 -machinefile $PBS_NODEFILE /scratch/kxc035/solutionsort/solutionsort 128000000
+mpirun -np 16 -machinefile $PBS_NODEFILE /scratch/kxc035/solutionsort/solutionsort 128000000
+mpirun -np 8 -machinefile $PBS_NODEFILE /scratch/kxc035/solutionsort/solutionsort 128000000
+mpirun -np 4 -machinefile $PBS_NODEFILE /scratch/kxc035/solutionsort/solutionsort 128000000
+mpirun -np 2 -machinefile $PBS_NODEFILE /scratch/kxc035/solutionsort/solutionsort 128000000
+mpirun -np 1 -machinefile $PBS_NODEFILE /scratch/kxc035/solutionsort/solutionsort 128000000
